@@ -14,6 +14,9 @@ namespace ErpSpSheets
 
         private ExcelWorksheet ws;
         private ExcelPackage package;
+        private int lastRow;
+        private int lastCol;
+        private string retType;
 
         public string OpenPlanilha(string FileName, string WorkSheet)
         {
@@ -51,25 +54,39 @@ namespace ErpSpSheets
         public string ReadText(int ln, int col)
         {
             string retText = "";
-
+            bool podeLer = true;
+            
             if (ws != null)
             {
-                if(!string.IsNullOrEmpty(ws.Cells[ln, col].Value.ToString()))
+                lastRow = ws.Dimension.End.Row;
+                lastCol = ws.Dimension.End.Column;
+
+                if (ln > lastRow || col > lastCol || ws.Cells[ln, col].Value == null)
+                    podeLer = false;
+
+                if (podeLer && !string.IsNullOrEmpty(ws.Cells[ln, col].Value.ToString()))
                 {
                     retText = ws.Cells[ln, col].Value.ToString();
                 }
             }
-
+            
             return retText;
         }
 
         public int ReadNumber(int ln, int col)
         {
             int retNumber = 0;
+            bool podeLer = true;
 
             if (ws != null)
             {
-                if (!string.IsNullOrEmpty(ws.Cells[ln, col].Value.ToString()))
+                lastRow = ws.Dimension.End.Row;
+                lastCol = ws.Dimension.End.Column;
+
+                if (ln > lastRow || col > lastCol || ws.Cells[ln, col].Value == null)
+                    podeLer = false;
+
+                if (podeLer && !string.IsNullOrEmpty(ws.Cells[ln, col].Value.ToString()))
                 {
                     try
                     {
@@ -88,12 +105,22 @@ namespace ErpSpSheets
         public decimal ReadReal(int ln, int col)
         {
             decimal retReal = 0;
+            bool podeLer = true;
 
             if (ws != null)
-            {
+            {                
                 try
                 {
-                    retReal = Convert.ToDecimal(ws.Cells[ln, col].Value.ToString());
+                    lastRow = ws.Dimension.End.Row;
+                    lastCol = ws.Dimension.End.Column;
+
+                    if (ln > lastRow || col > lastCol || ws.Cells[ln, col].Value == null)
+                        podeLer = false;
+
+                    if (podeLer)
+                    {
+                        retReal = Convert.ToDecimal(ws.Cells[ln, col].Value.ToString());
+                    }
                 }
                 catch (Exception)
                 {
@@ -107,12 +134,22 @@ namespace ErpSpSheets
         public DateTime ReadDate(int ln, int col)
         {
             DateTime retDate = new DateTime();
+            bool podeLer = true;
 
             if (ws != null)
             {
                 try
                 {
-                    retDate = Convert.ToDateTime(ws.Cells[ln, col].Value.ToString());
+                    lastRow = ws.Dimension.End.Row;
+                    lastCol = ws.Dimension.End.Column;
+
+                    if (ln > lastRow || col > lastCol || ws.Cells[ln, col].Value == null)
+                        podeLer = false;
+
+                    if (podeLer)
+                    {
+                        retDate = Convert.ToDateTime(ws.Cells[ln, col].Value.ToString());
+                    }
                 }
                 catch (Exception)
                 {
@@ -123,6 +160,29 @@ namespace ErpSpSheets
             return retDate;
         }
 
+        public string ReadType(int ln, int col)
+        {
+            string retType = "";
+            bool podeLer = true;
+
+            if (ws != null)
+            {
+                lastRow = ws.Dimension.End.Row;
+                lastCol = ws.Dimension.End.Column;
+
+                if (ln > lastRow || col > lastCol || ws.Cells[ln, col].Value == null)
+                    podeLer = false;
+
+                if (podeLer && !string.IsNullOrEmpty(ws.Cells[ln, col].Value.ToString()))
+                {
+                    var tipo = ws.Cells[ln, col].Value.GetType();
+                    retType = tipo.ToString();
+                }
+            }
+
+            return retType;
+        }
+
         public string ClosePlanilha ()
         {
             string result = "";
@@ -131,11 +191,11 @@ namespace ErpSpSheets
             {
                 try
                 {
-                    package.Save();
+                    package.Dispose();
                 }
                 catch (Exception ex)
                 {
-                    result = "Não Foi Possivel Salvar/Fechar a Planilha! \n" + ex.Message;
+                    result = "Não Foi Possivel Fechar a Planilha! \n" + ex.Message;
                 }
             }
 

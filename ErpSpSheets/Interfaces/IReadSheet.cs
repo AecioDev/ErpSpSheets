@@ -1,8 +1,8 @@
-﻿using System;
-using System.Runtime.InteropServices;
-
-namespace ErpSpSheets
+﻿namespace ErpSpSheets
 {
+    using System;
+    using System.Runtime.InteropServices;
+
     [Guid("9CA006F9-50BD-4B7F-90F1-575127DDC2F0"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), ComVisible(true)]
     public interface IReadSheet
     {

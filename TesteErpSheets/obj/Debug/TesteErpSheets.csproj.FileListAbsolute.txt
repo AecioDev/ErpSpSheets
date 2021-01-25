@@ -1,0 +1,14 @@
+D:\C#\ErpSpSheets\TesteErpSheets\obj\Debug\TesteErpSheets.csprojAssemblyReference.cache
+D:\C#\ErpSpSheets\TesteErpSheets\obj\Debug\TesteErpSheets.csproj.CoreCompileInputs.cache
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\TesteErpSheets.exe.config
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\TesteErpSheets.exe
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\TesteErpSheets.pdb
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\ErpSpSheets.dll
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\EPPlus.dll
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\ErpSpSheets.pdb
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\EPPlus.xml
+D:\C#\ErpSpSheets\TesteErpSheets\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\C#\ErpSpSheets\TesteErpSheets\obj\Debug\TesteErpSheets.csproj.CopyComplete
+D:\C#\ErpSpSheets\TesteErpSheets\obj\Debug\TesteErpSheets.exe
+D:\C#\ErpSpSheets\TesteErpSheets\obj\Debug\TesteErpSheets.pdb

@@ -1,0 +1,11 @@
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\ErpSpSheets.dll
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\ErpSpSheets.pdb
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\EPPlus.dll
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\EPPlus.xml
+D:\C#\ErpSpSheets\ErpSpSheets\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\C#\ErpSpSheets\ErpSpSheets\obj\Debug\ErpSpSheets.csprojAssemblyReference.cache
+D:\C#\ErpSpSheets\ErpSpSheets\obj\Debug\ErpSpSheets.csproj.CoreCompileInputs.cache
+D:\C#\ErpSpSheets\ErpSpSheets\obj\Debug\ErpSpSheets.csproj.CopyComplete
+D:\C#\ErpSpSheets\ErpSpSheets\obj\Debug\ErpSpSheets.dll
+D:\C#\ErpSpSheets\ErpSpSheets\obj\Debug\ErpSpSheets.pdb
