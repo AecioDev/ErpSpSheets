@@ -9,19 +9,19 @@ namespace ErpSpSheets
         string OpenPlanilha(string FileName, string WorkSheet);
         string SavePlanilha();
 
-        void CellValue(int ln, int col, string value);
-        void CellFormula(int ln, int col, string value);
-        void CellHAlign(int ln, int col, string value);
-        void CellVAlign(int ln, int col, string value);
-        void CellStyle(int ln, int col, string style, string value);
+        string CellValue(int ln, int col, string value);
+        string CellFormula(int ln, int col, string value);
+        string CellHAlign(int ln, int col, string value);
+        string CellVAlign(int ln, int col, string value);
+        string CellStyle(int ln, int col, string style, string value);
 
-        void RangeValue(string range, string value);
-        void RangeFormula(string range, string value);
-        void RangeHAlign(string range, string value);
-        void RangeVAlign(string range, string value);
-        void RangeStyle(string range, string style, string value);
-        void RangeMerge(string range, string value);
-        void RangeImage(string patchImg, int colImg, int rowImg, int posTop, int posLeft, int imgWidth, int imgHeight);
+        string RangeValue(string range, string value);
+        string RangeFormula(string range, string value);
+        string RangeHAlign(string range, string value);
+        string RangeVAlign(string range, string value);
+        string RangeStyle(string range, string style, string value);
+        string RangeMerge(string range, string value);
+        string RangeImage(string patchImg, int colImg, int rowImg, int posTop, int posLeft, int imgWidth, int imgHeight);
 
     }
 }
