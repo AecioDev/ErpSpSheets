@@ -54,7 +54,9 @@
   <ItemGroup>
     <Compile Include="Classes\ReadSheet.cs" />
     <Compile Include="Interfaces\IReadSheet.cs" />
+    <Compile Include="Interfaces\IWriteSheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\WriteSheet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dados\" />
